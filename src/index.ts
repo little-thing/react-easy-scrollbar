@@ -1,1 +1,2 @@
-export default 'Hello father 4!';
+export * from './hooks';
+export * from './components'

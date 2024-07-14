@@ -22,3 +22,5 @@ export const useEasyScrollbar = <E extends HTMLElement>(ref: MutableRefObject<E>
         scrollBarWidth: 0
     };
 }
+
+export default useEasyScrollbar;

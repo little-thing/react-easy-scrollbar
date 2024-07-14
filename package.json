@@ -1,7 +1,7 @@
 {
   "name": "react-easy-scrollbar",
   "version": "0.0.1",
-  "description": "test father builder",
+  "description": "Completely pollution-free UI, perfect scrollbar implemented through CSS",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
@@ -23,12 +23,13 @@
     "access": "public"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.24.8",
     "@types/react": "^18.3.3",
     "father": "^4.4.5"
   },
   "peerDependencies": {
+    "perfect-scrollbar": "^1.5.5",
     "react": ">=16.9.0",
-    "react-dom": ">=16.9.0",
-    "perfect-scrollbar": "^1.5.5"
+    "react-dom": ">=16.9.0"
   }
 }
