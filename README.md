@@ -1,24 +1,36 @@
-# react-easy-scrollbar
+# Welcome to react-easy-scrollbar 👋
 A modern scrollbar style decoration tool that is fully compatible with UI
 
-[![NPM version](https://img.shields.io/npm/v/my-frist-project.svg?style=flat)](https://npmjs.com/package/my-frist-project)
-[![NPM downloads](http://img.shields.io/npm/dm/my-frist-project.svg?style=flat)](https://npmjs.com/package/my-frist-project)
+[![Version](https://img.shields.io/npm/v/react-easy-scrollbar.svg)](https://www.npmjs.com/package/react-easy-scrollbar)
+[![NPM downloads](http://img.shields.io/npm/dm/react-easy-scrollbar.svg?style=flat)](https://npmjs.com/package/react-easy-scrollbar)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
+
+> Completely pollution-free UI, perfect scrollbar implemented through CSS
+
+### ✨ [Demo](http://example.com)
 
 ## Install
 
-```bash
-$ pnpm install
+```sh
+npm install
 ```
 
-```bash
-$ npm run dev
-$ npm run build
+## Run tests
+
+```sh
+npm run test
 ```
 
-## Options
+## Author
 
-TODO
+👤 **little-thing**
 
-## LICENSE
+* Github: [@little-thing](https://github.com/little-thing)
 
-MIT
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
