@@ -1,31 +1,28 @@
-import { ReactNode, useEffect, HTMLAttributes, ElementType, forwardRef } from "react";
-import PerfectScrollbar from "perfect-scrollbar";
+import { ReactNode, HTMLAttributes, ElementType, forwardRef } from 'react';
+import PerfectScrollbar from 'perfect-scrollbar';
+
+import 'perfect-scrollbar/css/perfect-scrollbar.css';
+import '../scrollbar.css';
+import { useEasyScrollbar } from '../hooks';
 
 type Props<T extends HTMLElement> = HTMLAttributes<T> & {
   children?: ReactNode;
-  container?: ElementType |  keyof HTMLElementTagNameMap
-  options?:PerfectScrollbar.Options
+  container?: ElementType | keyof HTMLElementTagNameMap;
+  options?: PerfectScrollbar.Options;
 };
 
-export const EasyScrollContainer =forwardRef<HTMLElement,Props<HTMLElement>>(
-    <T extends HTMLDivElement> ({children,container,options, ...props}:Props<T>,ref:any)=>{
+export const EasyScrollContainer = forwardRef<HTMLElement, Props<HTMLElement>>(
+  <T extends HTMLDivElement>({ children, container, options, ...props }: Props<T>, ref: any) => {
+    const Comp = container || 'div';
 
-      const Comp = container||'div';
+    useEasyScrollbar(ref);
 
-useEffect(()=>{
-        if(ref.current){
-        const ps =   new PerfectScrollbar(ref.current,options);
-
-        return ()=>ps.destroy();
-        }
-
-      },[ref])
-
-      return <Comp {...props} ref={ref}>{children}</Comp>
-    }
-)
+    return (
+      <Comp {...props} ref={ref}>
+        {children}
+      </Comp>
+    );
+  }
+);
 
 export default EasyScrollContainer;
-
-
-

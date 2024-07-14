@@ -1,7 +1,10 @@
-import { useEffect, useRef, MutableRefObject } from 'react';
-import PerfectScrollbar from "perfect-scrollbar";
+import { useEffect, useRef, RefObject } from 'react';
+import PerfectScrollbar from 'perfect-scrollbar';
 
-export const useEasyScrollbar = <E extends HTMLElement>(ref: MutableRefObject<E>, options?: PerfectScrollbar.Options) => {
+import 'perfect-scrollbar/css/perfect-scrollbar.css';
+import '../scrollbar.css';
+
+export const useEasyScrollbar = <E extends HTMLElement>(ref: RefObject<E>, options?: PerfectScrollbar.Options) => {
     const psRef = useRef<PerfectScrollbar | null>(null);
 
     const _ps = psRef.current;
@@ -9,7 +12,15 @@ export const useEasyScrollbar = <E extends HTMLElement>(ref: MutableRefObject<E>
     useEffect(() => {
         const element = ref.current;
         if (element) {
+            const computedStyle = window.getComputedStyle(element);
+            const hasPositionStyle = computedStyle.position !== 'static';
+            if(!hasPositionStyle){
+                // 添加 CSS 类
+                element.classList.add('easy-container');
+            }
+            
             psRef.current = new PerfectScrollbar(element, options);
+
         }
 
         return () => {
@@ -18,9 +29,7 @@ export const useEasyScrollbar = <E extends HTMLElement>(ref: MutableRefObject<E>
             }
         };
     }, [_ps, ref, options]);
-    return {
-        scrollBarWidth: 0
-    };
+
 }
 
 export default useEasyScrollbar;
