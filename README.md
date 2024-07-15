@@ -1,6 +1,11 @@
 # Welcome to react-easy-scrollbar 👋
 A modern scrollbar style decoration tool that is fully compatible with UI
 
+This is a very easy to integrate reac scrollbar. 
+Just one line of code is needed to modify your scrollbar to an elegant modern style, completely free of UI element pollution,
+preserving the original layout.
+It uses ref to inject elements and does not hinder your event handling of the elements
+
 [![Version](https://img.shields.io/npm/v/react-easy-scrollbar.svg)](https://www.npmjs.com/package/react-easy-scrollbar)
 [![NPM downloads](http://img.shields.io/npm/dm/react-easy-scrollbar.svg?style=flat)](https://npmjs.com/package/react-easy-scrollbar)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)

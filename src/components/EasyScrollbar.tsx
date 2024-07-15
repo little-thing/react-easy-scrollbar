@@ -1,4 +1,4 @@
-import { ReactNode, HTMLAttributes, ElementType, forwardRef } from 'react';
+import { ReactNode, HTMLAttributes, ElementType, forwardRef, useRef } from 'react';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 import 'perfect-scrollbar/css/perfect-scrollbar.css';
@@ -15,10 +15,14 @@ export const EasyScrollContainer = forwardRef<HTMLElement, Props<HTMLElement>>(
   <T extends HTMLDivElement>({ children, container, options, ...props }: Props<T>, ref: any) => {
     const Comp = container || 'div';
 
-    useEasyScrollbar(ref);
+    const devRef = useRef<T>(null);
+
+    const _ref = ref || devRef;
+
+    useEasyScrollbar(_ref);
 
     return (
-      <Comp {...props} ref={ref}>
+      <Comp {...props} ref={_ref}>
         {children}
       </Comp>
     );
