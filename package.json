@@ -17,10 +17,11 @@
     "easy",
     "perfect",
     "component",
+    "react-scrollbar",
+    "easy-scrollbar",
     "scrollbar",
     "scroll",
-    "scrollarea",
-    "easy-scrollbar"
+    "scrollarea"
   ],
   "authors": [
     "1107589563@qq.com"
