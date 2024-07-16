@@ -1,6 +1,6 @@
 {
   "name": "react-easy-scrollbar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Completely pollution-free UI, perfect scrollbar implemented through CSS",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -10,7 +10,13 @@
     "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "keywords": ["react","scrollbar","css","UI","easy"],
+  "keywords": [
+    "react",
+    "scrollbar",
+    "css",
+    "UI",
+    "easy"
+  ],
   "authors": [
     "1107589563@qq.com"
   ],
