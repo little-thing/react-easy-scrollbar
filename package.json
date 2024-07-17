@@ -11,17 +11,16 @@
     "prepublishOnly": "father doctor && npm run build"
   },
   "keywords": [
-    "react",
-    "css",
-    "UI",
-    "easy",
-    "perfect",
-    "component",
-    "react-scrollbar",
-    "easy-scrollbar",
     "scrollbar",
     "scroll",
-    "scrollarea"
+    "scrollarea",
+    "react scrollbar",
+    "react scroll",
+    "easy scroll",
+    "react",
+    "easy",
+    "perfect",
+    "component"
   ],
   "authors": [
     "1107589563@qq.com"
