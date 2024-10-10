@@ -2,6 +2,7 @@
   "name": "react-easy-scrollbar",
   "version": "0.0.8",
   "description": "Completely pollution-free UI, perfect scrollbar implemented through CSS",
+  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {
