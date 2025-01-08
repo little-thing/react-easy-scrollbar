@@ -5,7 +5,7 @@ import 'perfect-scrollbar/css/perfect-scrollbar.css';
 import '../scrollbar.css';
 
 
-export const useEasyScrollbar = <E extends HTMLElement>(ref: ForwardedRef<E>|RefObject<E>, options?: PerfectScrollbar.Options) => {
+export const useEasyScrollbar = <E extends HTMLElement>(ref: ForwardedRef<E>|RefObject<E>|string, options?: PerfectScrollbar.Options) => {
     const psRef = useRef<PerfectScrollbar | null>(null);
 
     const _ps = psRef.current;
@@ -41,6 +41,24 @@ export const useEasyScrollbar = <E extends HTMLElement>(ref: ForwardedRef<E>|Ref
 
             }
 
+        }else if(typeof ref === 'string' ){
+            const element = document.querySelector(ref);
+
+            if(element){
+                if (element instanceof Element) {
+                    const computedStyle = window.getComputedStyle(element);
+                    const hasPositionStyle = computedStyle.position !== 'static';
+                    if(!hasPositionStyle){
+                        // 添加 CSS 类
+                        element.classList.add('easy-container');
+                    }
+
+                    psRef.current = new PerfectScrollbar(element, options);
+
+                }else {
+                    console.warn('ref current is not a HTMLElement');
+                }
+            }
         }else {
             const element = ref.current;
             if (element) {
