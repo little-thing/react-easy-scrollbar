@@ -53,12 +53,12 @@ export const useEasyScrollbar = <E extends HTMLElement>(ref: ForwardedRef<E>|Ref
                         element.classList.add('easy-container');
                     }
 
-                    psRef.current = new PerfectScrollbar(element, options);
-
                 }else {
                     console.warn('ref current is not a HTMLElement');
                 }
             }
+
+            psRef.current = new PerfectScrollbar(ref, options);
         }else {
             const element = ref.current;
             if (element) {
