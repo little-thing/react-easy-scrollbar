@@ -27,6 +27,14 @@
     "1107589563@qq.com"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/little-thing/react-easy-scrollbar#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/little-thing/react-easy-scrollbar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/little-thing/react-easy-scrollbar/issues"
+  },
   "files": [
     "dist",
     "compiled"

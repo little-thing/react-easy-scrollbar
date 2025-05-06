@@ -1,6 +1,8 @@
 # Welcome to react-easy-scrollbar 👋
 A modern scrollbar style decoration tool that is fully compatible with UI
 
+[Homepage](https://github.com/little-thing/react-easy-scrollbar) ｜ [Issues](https://github.com/little-thing/react-easy-scrollbar/issues) 
+
 This is a very easy to integrate reac scrollbar. 
 Just one line of code is needed to modify your scrollbar to an elegant modern style, completely free of UI element pollution,
 preserving the original layout.
